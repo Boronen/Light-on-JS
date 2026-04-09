@@ -1,4 +1,4 @@
-import { getSfxVolume } from "./sfxVolume.js";
+import { getSfxVolume } from "./sfxvolume.js";
 
 const ACHIEVEMENTS = {
   FIRST_WIN: {
