@@ -1,7 +1,7 @@
 import { detectLanguage, applyLanguage } from "./ui/language.js";
 import { initColorPicker } from "./ui/colorPicker.js";
-import { initDevMode } from "./ui/devmode.js";
-import { initGameStarter } from "./ui/gamestarter.js";
+import { initDevMode } from "./ui/devMode.js";
+import { initGameStarter } from "./ui/gameStarter.js";
 
 export let winAudio = new Audio();
 
