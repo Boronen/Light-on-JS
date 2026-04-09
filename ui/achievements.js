@@ -1,3 +1,5 @@
+import { getSfxVolume } from "./sfxVolume.js";
+
 const ACHIEVEMENTS = {
   FIRST_WIN: {
     id: "FIRST_WIN",
@@ -50,6 +52,7 @@ export function unlockAchievement(ach) {
 
   if (ach.sound) {
     const audio = new Audio(ach.sound);
+    audio.volume = getSfxVolume();
     audio.play();
   }
 

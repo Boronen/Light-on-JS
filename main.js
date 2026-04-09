@@ -2,8 +2,13 @@ import { detectLanguage, applyLanguage } from "./ui/language.js";
 import { initColorPicker } from "./ui/colorPicker.js";
 import { initDevMode } from "./ui/devMode.js";
 import { initGameStarter } from "./ui/gameStarter.js";
+import { getSfxVolume, initSfxVolumeUI } from "./ui/sfxVolume.js";
 
 export let winAudio = new Audio();
+
+initSfxVolumeUI(() => {
+  winAudio.volume = getSfxVolume();
+});
 
 document.getElementById("victoryBtn").addEventListener("click", () => {
   winAudio.pause();

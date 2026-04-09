@@ -42,9 +42,6 @@ export class BoardView {
     }
   }
 
-  /**
-   * Rács cellaméret nagy kijelzőhöz / kis nézethez (forgatás, méretváltás).
-   */
   frissitsRacsMeret() {
     const size = this.model.size;
     if (!size || this.cellElems.length === 0) return;

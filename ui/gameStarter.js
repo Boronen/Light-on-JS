@@ -7,16 +7,11 @@ import {
   incrementWinCounterAndAchievements,
 } from "./achievements.js";
 import { winAudio } from "../main.js";
+import { getSfxVolume } from "./sfxVolume.js";
 
 let timer = null;
 let ido = 0;
 
-/**
- * Build pure game state first, then attach the view (DOM).
- * @param {number} meret
- * @param {HTMLElement} jatekterElem
- * @param {string} lang
- */
 export function createGameSession(meret, jatekterElem, lang) {
   const model = new BoardModel(meret);
   model.veletlenKezdoFeny();
@@ -29,6 +24,7 @@ export function createGameSession(meret, jatekterElem, lang) {
 
     winAudio.src = "./win.mp3";
     winAudio.currentTime = 0;
+    winAudio.volume = getSfxVolume();
     winAudio.play();
 
     incrementWinCounterAndAchievements(unlockAchievement);

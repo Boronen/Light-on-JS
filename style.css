@@ -574,6 +574,64 @@ h1 {
   font-size: 0.85rem;
 }
 
+.sfx-volume-panel {
+  position: fixed;
+  top: max(0.5rem, env(safe-area-inset-top));
+  left: max(0.5rem, env(safe-area-inset-left));
+  z-index: 99950;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sfx-volume-label {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--gray-2);
+  cursor: default;
+  user-select: none;
+}
+
+#sfxVolumeSlider {
+  width: min(100px, 28vw);
+  min-width: 72px;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    90deg,
+    var(--gray-4) 0%,
+    var(--paper) 100%
+  );
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1px solid var(--gray-4);
+}
+
+#sfxVolumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#sfxVolumeSlider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 480px) {
   :root {
     --panel-max: 100%;

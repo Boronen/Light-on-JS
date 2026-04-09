@@ -5,7 +5,6 @@ const DEACTIVATE_CODE = ["d", "e", "v", "0", "0"];
 
 let buffer = [];
 
-// CSS animációk
 const style = document.createElement("style");
 style.textContent = `
 @keyframes devPulse {
@@ -21,7 +20,6 @@ style.textContent = `
 document.head.appendChild(style);
 
 export function initDevMode() {
-  // Desktop: billentyűkód
   window.addEventListener("keydown", (e) => {
     buffer.push(e.key.toLowerCase());
     if (buffer.length > 5) buffer.shift();
@@ -41,11 +39,9 @@ export function initDevMode() {
     }
   });
 
-  // Mobil: bal felső 5 tap = ON, jobb felső 5 tap = OFF
   registerMobileDevActivator();
   registerMobileDevDeactivator();
 
-  // Ha már aktív volt
   if (localStorage.getItem("devMode") === "on") {
     addDevBorder();
     initDevTools();
