@@ -7,7 +7,7 @@ import {
   incrementWinCounterAndAchievements,
 } from "./achievements.js";
 import { winAudio } from "../main.js";
-import { getSfxVolume } from "./sfxvolume.js";
+import { getSfxVolume } from "./audio-volume.js";
 
 let timer = null;
 let ido = 0;

@@ -2,7 +2,7 @@ import { detectLanguage, applyLanguage } from "./ui/language.js";
 import { initColorPicker } from "./ui/colorPicker.js";
 import { initDevMode } from "./ui/devMode.js";
 import { initGameStarter } from "./ui/gameStarter.js";
-import { getSfxVolume, initSfxVolumeUI } from "./ui/sfxvolume.js";
+import { getSfxVolume, initSfxVolumeUI } from "./ui/audio-volume.js";
 
 export let winAudio = new Audio();
 winAudio.volume = getSfxVolume();
