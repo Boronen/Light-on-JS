@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Lights Out</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+  <div id="achievements"></div>
+
+  <div id="container">
+
+    <h1>Lights Out</h1>
+
+    <div id="controls">
+      <input id="meretInput" type="number" placeholder="Méret (max 99)">
+      <button id="startBtn">Új játék</button>
+    </div>
+
+    <div id="colorPickerContainer">
+      <label>Szín kiválasztása:</label>
+      <div id="colorPreview"></div>
+
+      <div id="hueSliderContainer">
+        <input type="range" id="hueSlider" min="0" max="360">
+      </div>
+
+      <canvas id="slCanvas" width="200" height="200"></canvas>
+
+      <input id="hexInput" type="text" maxlength="7">
+    </div>
+
+    <div id="info">
+      <span id="lepesek">Lépések: 0</span> |
+      <span id="ido">Idő: 0 mp</span>
+    </div>
+
+    <div class="board-viewport" aria-label="Játéktábla">
+      <div id="jatekter"></div>
+    </div>
+
+    <div id="footer"></div>
+
+    <div id="achievementList"></div>
+
+  </div>
+
+  <div id="victoryOverlay">
+    <div id="victoryBox">
+      <h2 id="victoryText">Hurrá, meghosszabbítottad a Föld életét!</h2>
+      <button id="victoryBtn">Új játék</button>
+    </div>
+  </div>
+
+</body>
+</html>
